@@ -1,0 +1,12 @@
+{
+	"name": "dnd-beyond-pfd-parser",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/BenSegal855/DnD-Beyond-pdf-parser.git",
+	"author": "Ben",
+	"license": "MIT",
+	"packageManager": "yarn@3.5.0",
+	"devDependencies": {
+		"eslint": "^8.38.0"
+	}
+}
