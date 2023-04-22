@@ -401,9 +401,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dnd-beyond-pfd-parser@workspace:.":
+"dnd-beyond-pdf-parser@workspace:.":
   version: 0.0.0-use.local
-  resolution: "dnd-beyond-pfd-parser@workspace:."
+  resolution: "dnd-beyond-pdf-parser@workspace:."
   dependencies:
     axios: ^1.3.5
     eslint: ^8.38.0
