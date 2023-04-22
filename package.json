@@ -1,6 +1,6 @@
 {
 	"name": "dnd-beyond-pfd-parser",
-	"version": "1.0.0",
+	"version": "1.1.1",
 	"main": "src/index.js",
 	"repository": "https://github.com/BenSegal855/DnD-Beyond-pdf-parser.git",
 	"author": "Ben",
@@ -9,6 +9,7 @@
 	"type": "module",
 	"scripts": {
 		"start": "node .",
+		"build": "docker build --tag ben855/$npm_package_name:$npm_package_version .",
 		"watch": "node-dev . --notify=false",
 		"lint:fix": "eslint src --fix",
 		"lint": "eslint src"

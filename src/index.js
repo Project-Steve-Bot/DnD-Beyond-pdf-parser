@@ -12,7 +12,7 @@ const port = 8080;
  * @returns {string} The value
  */
 function findValue(page, id) {
-	return page.Fields.find(field => field.id.Id === id).V;
+	return page.Fields.find(field => field.id.Id === id)?.V;
 }
 
 /**
@@ -34,6 +34,15 @@ function getValueList(page, ids) {
 	});
 
 	return out;
+}
+
+/**
+ * @param {Page[]} pages The list of pages
+ * @param {string} text The text to search for
+ * @returns {Page} The page containing the text
+ */
+function findPage(pages, text) {
+	return pages.find(page => page.Texts.map(element => element.R[0]?.T).includes(text));
 }
 
 
@@ -72,19 +81,22 @@ app.get('/rolls', async (req, res) => {
 			.map(field => field.V);
 
 			const attacks = weaponNames
-				.map((name, idx) => ({
-					name,
-					roll: weaponAttack[idx],
-					damage: weaponDamage[idx]?.split(' ')[0]
-				}))
+				.map((name, idx) => {
+				const maybeDamage = weaponDamage[idx]?.split(' ')[0];
+					return {
+						name,
+						roll: weaponAttack[idx],
+						damage: maybeDamage?.includes('d') ? maybeDamage : undefined
+					};
+				})
 				.filter(({ roll: attack }) => !isNaN(attack));
 
-			const spellAttack = parseInt(findValue(pdfData.Pages[3], 'spellAtkBonus0'));
+			const spellAttack = parseInt(findValue(findPage(pdfData.Pages, 'SPELLCASTING'), 'spellAtkBonus0'));
 			if (!isNaN(spellAttack)) {
 				attacks.push({ name: 'Spell Attack', roll: spellAttack });
 			}
 
-			const abilityChecks = getValueList(pdfData.Pages[0],[
+			const abilityChecks = getValueList(pdfData.Pages[0], [
 				['Init', 'Initiative'],
 				['Acrobatics'],
 				['Animal', 'Animal Handling'],
@@ -106,7 +118,7 @@ app.get('/rolls', async (req, res) => {
 				['Survival']
 			]);
 
-			const attributes = getValueList(pdfData.Pages[0],  [
+			const attributes = getValueList(pdfData.Pages[0], [
 				['STR', 'Strength'],
 				['DEX', 'Dexterity'],
 				['CON', 'Constitution'],
