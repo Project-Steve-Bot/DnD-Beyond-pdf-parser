@@ -5,7 +5,7 @@
 	"repository": "https://github.com/BenSegal855/DnD-Beyond-pdf-parser.git",
 	"author": "Ben",
 	"license": "MIT",
-	"packageManager": "yarn@3.8.0",
+	"packageManager": "yarn@3.8.1",
 	"type": "module",
 	"scripts": {
 		"start": "node .",
