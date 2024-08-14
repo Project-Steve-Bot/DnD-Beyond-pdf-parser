@@ -1303,13 +1303,13 @@ __metadata:
   linkType: hard
 
 "pdf2json@npm:^3.0.3":
-  version: 3.1.3
-  resolution: "pdf2json@npm:3.1.3"
+  version: 3.1.4
+  resolution: "pdf2json@npm:3.1.4"
   dependencies:
     "@xmldom/xmldom": ^0.8.10
   bin:
     pdf2json: bin/pdf2json.js
-  checksum: 5a89a017fffb19b7fc0c1d1d81f340729193a578e6b083b3509f7cb511ad9ae8d963ac8fc3ec935374b1930dfc10cf8569f899cd0eb205848d85ab07dc4956e8
+  checksum: 37736e003879ef063d6e5ded7cc22380cabef1816ecbfac646ed587d59ef31e762d054a6e6e4ebb745e605e3aa2834317f9ae93429a4796bbd3d273a36c2d1d7
   languageName: node
   linkType: hard
 
