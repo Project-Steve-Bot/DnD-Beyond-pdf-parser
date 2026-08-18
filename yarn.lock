@@ -462,7 +462,7 @@ __metadata:
     eslint: ^8.38.0
     express: ^4.18.2
     node-dev: ^8.0.0
-    pdf2json: ^3.0.3
+    pdf2json: ^4.0.0
   languageName: unknown
   linkType: soft
 
@@ -1510,12 +1510,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pdf2json@npm:^3.0.3":
-  version: 3.2.2
-  resolution: "pdf2json@npm:3.2.2"
+"pdf2json@npm:^4.0.0":
+  version: 4.0.3
+  resolution: "pdf2json@npm:4.0.3"
   bin:
     pdf2json: bin/pdf2json.js
-  checksum: 781f23520263196127eb4282f1608e1a1ccc844f0f46b9189c55102ed18bcb33c3ccd1c9c509c823f7fccc2fb6cd46e9f6d21fcab4f6d33b37f510d9f2736ab1
+  checksum: ded5539df51d966a077fcdc0c5f24b24f9eb1730edb38bc01670d02f286684801612fc92b159e796246676288fd4953f43cb7c22f26d1f683c4eb5a41ea1cca3
   languageName: node
   linkType: hard
 
