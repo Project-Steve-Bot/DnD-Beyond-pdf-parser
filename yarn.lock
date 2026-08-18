@@ -1511,11 +1511,11 @@ __metadata:
   linkType: hard
 
 "pdf2json@npm:^3.0.3":
-  version: 3.2.0
-  resolution: "pdf2json@npm:3.2.0"
+  version: 3.2.2
+  resolution: "pdf2json@npm:3.2.2"
   bin:
     pdf2json: bin/pdf2json.js
-  checksum: 0f23a34be5ce48cf4f3f1ad6bf47c14c161808237b5a1a456f343f7fe8632b0c02c11c5e53baab02b8eb8045f7c41e27b9e57ca74be198705db70256e546822f
+  checksum: 781f23520263196127eb4282f1608e1a1ccc844f0f46b9189c55102ed18bcb33c3ccd1c9c509c823f7fccc2fb6cd46e9f6d21fcab4f6d33b37f510d9f2736ab1
   languageName: node
   linkType: hard
 
